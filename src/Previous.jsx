@@ -4,12 +4,15 @@ function Previous() {
 
     const [count, setCount] = useState(0);
 
-    const previousCountRef = useRef();
+    const previousCountRef = useRef(null);
 
     const previousCount = previousCountRef.current;
 
     useEffect(() => {
+        console.log(count)
+        console.log('before', previousCountRef.current)
         previousCountRef.current = count;
+        console.log('after', previousCountRef.current)
     })
 
     return (
