@@ -1,6 +1,7 @@
 
 import './App.css'
 import Focus from './Focus';
+import Music from './Music';
 import Previous from './Previous';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
     <Focus />
 
     <Previous />
+
+    <Music />
 
 
     </>

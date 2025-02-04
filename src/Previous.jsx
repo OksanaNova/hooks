@@ -13,7 +13,7 @@ function Previous() {
     })
 
     return (
-        <div>
+        <div className="container">
             <p>Current state: {count}</p>
             <p>Previous state: {previousCount}</p>
             <button onClick={() => setCount(count +1)}>Click here</button>

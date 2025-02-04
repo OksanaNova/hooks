@@ -10,7 +10,7 @@ function Focus() {
     }
 
     return (
-        <div>
+        <div className="container">
             <input ref={inputRef} value={city} onChange={e => setCity(e.target.value)} />
             <p>I want to go to {city}</p>
             <button onClick={focus}>Use Ref</button>
