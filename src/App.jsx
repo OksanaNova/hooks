@@ -5,6 +5,7 @@ import HomeworkOne from './HomeworkOne';
 import Music from './Music';
 import Previous from './Previous';
 import Reducer from './Reducer';
+import Timer from './Timer';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
     <Reducer />
 
     <HomeworkOne />
-
+    
+    <Timer />
 
     </>
   )
