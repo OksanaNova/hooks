@@ -10,6 +10,7 @@ import Reducer from './Reducer';
 import Timer from './Timer';
 import TwoContext from './TwoContext';
 import { Context } from './Context';
+import FilterFruits from './FilterFruits';
 
 function App() {
 
@@ -34,6 +35,8 @@ function App() {
         <OneContext />
        <TwoContext />
     </Context.Provider>
+
+    <FilterFruits />
 
 
     </>
