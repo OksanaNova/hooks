@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useMemo, useState } from "react";
  
  const fruits = [
     { id: '1', item: 'apple'},
@@ -14,7 +13,7 @@ import { useState } from "react";
     { id: '10', item: 'raspberry'},
     { id: '11', item: 'blueberry'},
     { id: '12', item: 'pear'},
-    { id: '13', item: 'mango'},
+    { id: '13', item: 'mango'}
     ];
  
  function FilterFruits() {
@@ -23,7 +22,7 @@ import { useState } from "react";
     const [search, setSearch] = useState('');
 
     const handleText = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setText(e.target.value);
     }
 
@@ -31,10 +30,15 @@ import { useState } from "react";
         setSearch(text)
     }
 
-    const filteredFruits = fruits.filter((fruit) => {
-        console.log('rerender')
+    // const filteredFruits = fruits.filter((fruit) => {
+    //     console.log('rerender')
+    //     return fruit.item.toLowerCase().includes(search.toLowerCase())
+    // })
+
+    const filteredFruits = useMemo( () => fruits.filter((fruit) => {
+        console.log('filtering')
         return fruit.item.toLowerCase().includes(search.toLowerCase())
-    })
+    }), [search])
 
     return (
         <div className="container">
